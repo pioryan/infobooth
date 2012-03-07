@@ -1,0 +1,6 @@
+= javascript_tag do
+  $(document).ready(function(){
+  = "com.infobooth.init();"
+  = "if (!!com.infobooth.views.#{controller_namespace}) { com.infobooth.views.#{controller_namespace}.init(); } " if controller_namespace
+  = "if (!!com.infobooth.views.#{namespaced_controller_name}) { com.infobooth.views.#{namespaced_controller_name}.init(); }"
+  });
