@@ -1,9 +1,137 @@
-header  {
-  margin    :   0;
+body{
+  width             :   950px;
+  padding           :   0;
+  text-align        :   center;
+  font-family       :   Helvetica, sans-serif;
+  font-size         :   14px;
+  height            :   600px;
+  border            :   0;
+  margin            :   0 auto;
 
-  #logo {
-    padding   :   3px 0 0 8px;
-    width     :   200px; float:left;
+  > #content  {
+    clear:both;
+  }
+
+  header  {
+    width             :   950px;
+    margin            :   0;
+    height            :   55px;
+    background-image  :   url(border.gif);
+    padding           :   0;
+    border            :   0;
+    overflow          :hidden;
+    #logo {
+      padding           :   3px 0 0 8px;
+      width             :   200px;
+      float             :   left;
+    }
+
+    menu  {
+
+      ul  {
+        float           :   right;
+        margin-top      :   18px;
+        color           :   white;
+        width           :   300px;
+
+        li  {
+          display         :   block;
+          float           :   left;
+          padding-left    :   15px;
+          padding-bottom  :   10px;
+          padding-top  :      10px;
+          padding-right   :   15px;
+          border-right    :   1px solid #FFF;
+          line-height     :   0px;
+          a {
+            color       :   #FFF;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+  }
+
+  subheader {
+    clear:both;
+    width             :   950px;
+    margin            :   0;
+    height            :   55px;
+
+    submenu  {
+
+      ul  {
+        float           :   left;
+        margin-top      :   10px;
+        width           :   100px;
+        height          :   30px;
+        padding-left    :   10px;
+        li  {
+          display         :   block;
+          float           :   left;
+          padding-left    :   5px;
+          padding-bottom  :   10px;
+          line-height     :   22px;
+          background : pink;
+          border-right    :   1px solid #FFF;
+
+          a {
+            color       :   black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    ul#login  {
+      float           :   right;
+      margin-top      :   10px;
+      margin-right    :   10px;
+      width           :   314px;
+      height          :   30px;
+      li  {
+        display         :   block;
+        float           :   left;
+        padding-left    :   5px;
+        padding-bottom  :   10px;
+        line-height     :   22px;
+
+        #logintxt {
+          position:relative;
+          width: 105px;
+          margin-top: 1px;
+          span i {
+            position:absolute;
+            right: 0;
+            top: 3px;
+            display: block;
+            background-image:url(imglogos.gif);
+            height:23px;
+            width:30px;
+            background-position: -3px -3px;
+          }
+        }
+        
+        #search_icon {
+          position:   relative;
+          background: pink;
+          padding-left    :   16px;
+          span {
+            i {
+              position  : absolute;
+              right: 0;
+              top: 3px;
+              display: block;
+              background-image: url(imglogos.gif);
+              background-position: -40px -3px;
+              height  : 23px;
+              width :   20px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

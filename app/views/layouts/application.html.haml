@@ -1,20 +1,20 @@
 !!!
 %html
-	%head
-		%title Infobooth
-		= stylesheet_link_tag("application", :media => "all")
-		= javascript_include_tag("application")
-		= csrf_meta_tags
-	%body#top
-		%p.notice= notice
-		%p.alert= alert
+  %head
+    %title Infobooth
+    = stylesheet_link_tag("application", :media => "all")
+    = javascript_include_tag("application")
+    = csrf_meta_tags
+  %body#top
+    %p.notice= notice
+    %p.alert= alert
 
-		= render :partial => 'layouts/application/header'
-		= render :partial => 'layouts/application/sub_header'
+    = render :partial => 'layouts/application/header'
+    = render :partial => 'layouts/application/sub_header'
+    #content
+      = yield
 
-		= yield
+    = render :partial => 'layouts/application/footer'
 
-		= render :partial => 'layouts/application/footer'
-
-	= render :partial => 'layouts/application/page_specific_javascript'
+    = render :partial => 'layouts/application/page_specific_javascript'
 

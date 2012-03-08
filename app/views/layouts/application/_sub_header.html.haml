@@ -1,10 +1,16 @@
 %subheader
-	- menu_tag(:submenu, %w[software web], {:class => :submenu_list})
+  - menu_tag(:submenu, %w[software web], {:class => :submenu_list})
 
-	#login
-		%span#search.login   
-		%span#searchform.login
-		%form
-			%input{:col => "3", :height => "10px", :name => "search", :type => "text"}/
-		#world.login
-			%span#logintxt.login Login
+  %ul#login
+    %li#world
+      #logintxt
+        %span
+          %i
+          Login
+    %li#search_input
+      %input{:col => "3", :height => "10px", :name => "search", :type => "text"}/
+
+    %li
+      #search_icon
+        %span
+          %i
