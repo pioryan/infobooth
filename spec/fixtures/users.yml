@@ -1,0 +1,18 @@
+---
+admin:
+  id: 2
+  email: admin@admin.com
+  encrypted_password: $2a$04$ryTVmmACERuP8SA95JIgEeWkhru0ieE9DK1H8Otu0wStb0NFIuzvK
+  reset_password_token: !!null 
+  reset_password_sent_at: !!null 
+  remember_created_at: !!null 
+  sign_in_count: 0
+  current_sign_in_at: !!null 
+  last_sign_in_at: !!null 
+  current_sign_in_ip: !!null 
+  last_sign_in_ip: !!null 
+  created_at: 2012-03-11 17:46:40.000000000Z
+  updated_at: 2012-03-11 17:46:40.000000000Z
+  first_name: admin
+  middle_name: !!null 
+  last_name: admin

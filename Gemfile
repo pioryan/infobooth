@@ -30,7 +30,10 @@ group :development, :test do
   gem 'rspec2-rails-views-matchers', '>= 0.1.6'
   gem 'rspec-prof'
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem "fixture_builder", "~> 0.3.3"
+
 end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
