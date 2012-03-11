@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120305150536) do
+ActiveRecord::Schema.define(:version => 20120311163827) do
+
+  create_table "pages", :force => true do |t|
+    t.string  "title",                          :null => false
+    t.string  "slug",                           :null => false
+    t.text    "body"
+    t.boolean "active",      :default => false
+    t.integer "created_by",                     :null => false
+    t.integer "modified_by",                    :null => false
+  end
+
+  add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true
+  add_index "pages", ["title"], :name => "index_pages_on_title", :unique => true
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -39,6 +51,9 @@ ActiveRecord::Schema.define(:version => 20120305150536) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

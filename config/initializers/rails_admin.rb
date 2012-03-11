@@ -103,4 +103,12 @@ RailsAdmin.config do |config|
   #   create do; end
   #   update do; end
   # end
+
+  config.model Page do
+    create do
+      :title
+      :slug
+      :body
+    end
+  end
 end
