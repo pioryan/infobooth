@@ -32,7 +32,8 @@ body{
         float           :   right;
         margin-top      :   18px;
         color           :   white;
-        width           :   300px;
+        text-transform: uppercase;
+        width           :   auto;
 
         li  {
           display         :   block;
@@ -47,6 +48,10 @@ body{
             color       :   #FFF;
             text-decoration: none;
           }
+        }
+
+        :last-child {
+          border-right  : none;
         }
       }
     }
@@ -64,20 +69,22 @@ body{
       ul  {
         float           :   left;
         margin-top      :   10px;
-        width           :   100px;
+        width           :   250px;
         height          :   30px;
-        padding-left    :   10px;
+        padding-left         :  10px;
+        text-transform: uppercase;
         li  {
           display         :   block;
           float           :   left;
-          padding-left    :   5px;
-          padding-bottom  :   10px;
+          padding         :   5px;
+          width: 100px;
           line-height     :   22px;
-          background : pink;
+          background-image:url(border.gif);
+          background-position:0px -153px;
           border-right    :   1px solid #FFF;
 
           a {
-            color       :   black;
+            color       :   white;
             text-decoration: none;
           }
         }
@@ -115,7 +122,6 @@ body{
         
         #search_icon {
           position:   relative;
-          background: pink;
           padding-left    :   16px;
           span {
             i {

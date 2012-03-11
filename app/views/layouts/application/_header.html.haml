@@ -2,4 +2,4 @@
 	#logo
 		= image_tag('logo.png', :alt => "Infobooth Inc")
 	
-	- menu_tag(:menu, %w[home about contact])
+	- menu_tag(:menu, {:home => :home, :about => :about, :contact => :contact, :login => :admin})
