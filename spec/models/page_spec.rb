@@ -4,8 +4,6 @@ require 'spec_helper'
 describe Page do
   describe "validations" do
 
-    it {  validates_presence_of(:created_by) }
-
     it {  validates_presence_of(:modified_by)  }
 
     it {  validates_presence_of(:title)  }
@@ -27,6 +25,12 @@ describe Page do
         @user.pages.create!(:title => 'test2', :slug => 'testme', :body => 'Blah Blah')
       }.to change(Page, :count).by(1)
     end
+
+    it "should have a creator" do
+      page = @user.pages.create!(:title => 'test2', :slug => 'testme', :body => 'Blah Blah')
+      @user.id.should eql(page.created_by)
+    end
+
   end
 
 end
