@@ -4,7 +4,7 @@ module ApplicationHelper
 		haml_tag(tag) do
 			haml_tag(:ul, :class => options[:class]) do
 				menus.each_pair do |menu, slug|
-					haml_tag(:li) do
+					haml_tag(:li, :id => menu) do
 						haml_concat(link_to(t(:"pages.#{menu}"), "/#{slug}"))
 					end
 				end
