@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require infobooth
 //= require_tree .
+//= require swfobject
