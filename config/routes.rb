@@ -3,6 +3,12 @@ Infobooth::Application.routes.draw do
 
   devise_for :users
 
+  namespace :ckeditor do
+    resources :pictures, :only => [:index, :create, :destroy]
+    resources :attachment_files, :only => [:index, :create, :destroy]
+    resources :attachments, :only => [:index, :create, :destroy]
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
