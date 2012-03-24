@@ -6,9 +6,8 @@ RailsAdmin.config do |config|
   # If your default_local is different from :en, uncomment the following 2 lines and set your default locale here:
   # require 'i18n'
   # I18n.default_locale = :de
-
-  config.current_user_method { current_user } # auto-generated
-
+  config.authorize_with :cancan
+  config.current_user_method { current_user }
   # If you want to track changes on your models:
   # config.audit_with :history, User
 
@@ -105,10 +104,16 @@ RailsAdmin.config do |config|
   # end
 
   config.model Page do
-    create do
-      :title
-      :slug
-      :body
+    edit do
+      field :title
+
+      field :slug
+
+      field :active
+
+      field :body, :text do
+        ckeditor true
+      end
     end
   end
 end
