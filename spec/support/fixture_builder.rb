@@ -14,7 +14,7 @@ FixtureBuilder.configure do |fbuilder|
     name(:simple_user, simple_user)
 
     #Pages
-    test_page = Page.create!(:title => "Test", :slug => "test", :active => false, :modifier => admin_user, :body => "Blah Blah")
+    test_page = Page.create!(:title => "Test", :slug => "test", :active => false, :created_by => admin_user, :modified_by => admin_user, :body => "Blah Blah")
     name(:test, test_page)
 
     #Roles
@@ -22,7 +22,6 @@ FixtureBuilder.configure do |fbuilder|
     name(:admin, admin_role)
 
     #UserRoles
-    admin_user_role = UserRole.create!(:user  => admin_user, :role => admin_role)
-    name(:admin, admin_user_role)
+    admin_user.add_role('Admin')
   end
 end

@@ -24,10 +24,16 @@ describe User do
 
   describe "#add_role" do
     it "should create a role for user" do
-      @juan.user_roles.create!(:role => roles(:admin))
+      @juan.add_role('Admin')
       @juan.roles.should include(roles(:admin))
     end
+  end
 
+  describe "#remove_role" do
+    it "should remove a role from user" do
+      @juan.remove_role('Admin')
+      @juan.roles.should_not include(roles(:admin))
+    end
   end
 
 end
