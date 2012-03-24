@@ -1,9 +1,0 @@
----
-test:
-  id: 4
-  title: Test
-  slug: test
-  body: Blah Blah
-  active: false
-  created_by: 9
-  modified_by: 9
